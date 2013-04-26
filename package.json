@@ -16,11 +16,11 @@
 , "testling":
   { "files": [ "test.js" ]
   , "browsers":
-    { "chrome": [ "latest", "canary" ]
-    , "firefox": [ "latest", "nightly" ]
-    , "safari": [ "latest" ]
-    , "ie": [ "latest" ]
-    , "opera": [ "latest", "next" ]
+    { "chrome": [ "25", "canary" ]
+    , "firefox": [ "19", "nightly" ]
+    , "safari": [ "5.1" ]
+    , "ie": [ "10" ]
+    , "opera": [ "12", "next" ]
     }
   }
 , "repository":
