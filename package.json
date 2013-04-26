@@ -1,5 +1,5 @@
 { "name": "fishing"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "description": "Turn a promise into a stream or a stream into a promise."
 , "keywords": [ "promise", "stream" ]
 , "author": "Nick Niemeir <nick.niemeir@gmail.com> (http://nrn.io)"
