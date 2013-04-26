@@ -5,8 +5,13 @@
 , "author": "Nick Niemeir <nick.niemeir@gmail.com> (http://nrn.io)"
 , "scripts": { "test": "for f in ./t/*.js; do node $f; done" }
 , "dependencies":
-  { "swear": "*" }
-, "devDependencies": { "tape": "*" }
+  { "promise": "*"
+  , "stream-cb": "*"
+  }
+, "devDependencies":
+  { "tape": "*"
+  , "q": "*"
+  }
 , "engines": { "node": ">=0.10" }
 , "testling":
   { "files": [ "t/*.js" ]
