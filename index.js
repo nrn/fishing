@@ -18,7 +18,7 @@ function toStream (promise, noend) {
   var str = new stream.PassThrough
     , cb = convention.unwrap(streamCb.toCb(str, noend))
 
-  promise.then(cb.s, cb.s)
+  promise.then(cb.s, cb.e)
 
   return str
 }
@@ -27,7 +27,9 @@ function toPromise (st, encoding) {
   if (typeof st.then === 'function') return st
 
   return new Promise(function (resolve, reject) {
-    st.pipe(streamCb.toStream(convention.wrap(reject, resolve), encoding))
+    var ending = streamCb.toStream(convention.wrap(reject, resolve), encoding)
+    st.on('error', function (e) { ending.emit('error', e) })
+    st.pipe(ending)
   })
 }
 
