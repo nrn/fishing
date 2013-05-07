@@ -1,3 +1,6 @@
+// fishing, (c) 2013 Nick Niemeir <nick.niemeir@gmail.com>
+// MIT licensed. https://github.com/nrn/fishing
+
 var stream = require('stream')
   , Promise = require('promise')
   , streamCb = require('stream-cb')

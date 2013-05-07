@@ -1,17 +1,17 @@
 { "name": "fishing"
-, "version": "0.0.5"
+, "version": "0.1.0"
 , "description": "Turn a promise into a stream or a stream into a promise."
 , "keywords": [ "promise", "stream" ]
 , "author": "Nick Niemeir <nick.niemeir@gmail.com> (http://nrn.io)"
 , "scripts": { "test": "node test.js" }
 , "dependencies":
-  { "promise": "*"
-  , "stream-cb": "*"
+  { "promise": "~2.0"
+  , "stream-cb": "~0.1"
   , "convention": "~0.1"
   }
 , "devDependencies":
-  { "tape": "*"
-  , "q": "*"
+  { "tape": "~0.3"
+  , "q": "~0.9"
   }
 , "engines": { "node": ">=0.10" }
 , "testling":
