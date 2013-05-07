@@ -18,7 +18,7 @@ function toStream (promise, noend) {
   var str = new stream.PassThrough
     , cb = convention.unwrap(streamCb.toCb(str, noend))
 
-  promise.then(cb.s, cb.e)
+  promise.then(cb.success, cb.error)
 
   return str
 }

@@ -7,7 +7,7 @@
 , "dependencies":
   { "promise": "*"
   , "stream-cb": "*"
-  , "convention": "*"
+  , "convention": "~0.1"
   }
 , "devDependencies":
   { "tape": "*"
