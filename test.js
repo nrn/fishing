@@ -7,6 +7,9 @@ test('fishing', function (t) {
   var prom = q.fcall(function () {
     return 'asdf'
   })
+  var objprom = q.fcall(function () {
+    return {foo: 'bar'}
+  })
   var str = function () {
     var st = new stream.PassThrough
 
@@ -21,10 +24,15 @@ test('fishing', function (t) {
     t.equal(data.toString(), 'asdf', 'toStream recieved data.')
   }
 
-  t.plan(4)
+  t.plan(5)
 
   var st1 = fishing(prom)
   st1.on('data', stRecieve)
+
+  var objst1 = fishing(objprom)
+  objst1.on('data', function (data) {
+    t.equal(JSON.stringify(data), '{"foo":"bar"}', 'objets do not blow up')
+  })
 
   var prom1 = fishing(str())
   prom1.then(function (a) {

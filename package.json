@@ -1,5 +1,5 @@
 { "name": "fishing"
-, "version": "0.1.0"
+, "version": "0.2.0"
 , "description": "Turn a promise into a stream or a stream into a promise."
 , "keywords": [ "promise", "stream" ]
 , "author": "Nick Niemeir <nick.niemeir@gmail.com> (http://nrn.io)"
@@ -8,6 +8,7 @@
   { "promise": "~2.0"
   , "stream-cb": "~0.1"
   , "convention": "~0.1"
+  , "readable-stream": "~1.0"
   }
 , "devDependencies":
   { "tape": "~0.3"

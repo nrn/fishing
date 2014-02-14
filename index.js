@@ -1,7 +1,7 @@
 // fishing, (c) 2013 Nick Niemeir <nick.niemeir@gmail.com>
 // MIT licensed. https://github.com/nrn/fishing
 
-var stream = require('stream')
+var stream = require('readable-stream')
   , Promise = require('promise')
   , streamCb = require('stream-cb')
   , convention = require('convention')
@@ -18,7 +18,7 @@ function convert (item) {
 function toStream (promise, noend) {
   if (typeof promise.pipe === 'function') return promise
 
-  var str = new stream.PassThrough
+  var str = new stream.PassThrough({objectMode:true})
     , cb = convention.unwrap(streamCb.toCb(str, noend))
 
   promise.then(cb.success, cb.error)
